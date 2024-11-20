@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <!-- Add Bootstrap 5.3.3 CSS -->
+
+    <link type="text/css" rel="stylesheet" href="~/Content/materialize.css" />
+    <script src="~/Scripts/test-bundles/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-image: url(/Models/pictures/pink-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body ng-app="amPAWn" ng-controller="Controller">
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular/Module.js"></script>
+    <script src="~/Scripts/angular/Service.js"></script>
+    <script src="~/Scripts/angular/Controller.js"></script>
+</body>
+</html>
