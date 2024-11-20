@@ -13,32 +13,36 @@
                         <div class="card-content" style="border-radius: 10px; padding: 50px;">
                             <div class="row">
                                 <div class="card-title center" style="font-family: 'Poppins', sans-serif; color: black; font-size: 45px; font-weight: bold;">
-                                    <h2 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 75px; margin-left: -560px;">Log right in.</h2>
-                                    <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 25px; margin-top: 10px; margin-left: -610px;">Pick up right where you left off</h3>
+                                    <h2 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; margin-top: -250px;font-size: 45px; margin-right: -75px;">Log right in.</h2>
+                                    <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 15px; margin-top: -10px; margin-left: 50px;">Pick up right where you left off</h3>
                                 </div>
                             </div>
 
                             <div class="row" ng-init="Fetchfunc()">
-                                <!-- Username Field (id is tentative) -->
-                                <div class="input-field col s12" style="margin-bottom: 20px; margin-top: 20px;">
-                                    <div style="border: 2px solid #ccc; border-radius: 12px; padding: 10px 100px; background-color: white; max-width: 500px; margin-left: 5px; position: relative;">
-                                        <input id="Uname" type="text" class="validate" ng-model="Email" required style="border: none; box-shadow: none; font-size: 26px; padding: 6px 6px; color: #f6e4e4; background-color: white; width: 100%;" placeholder="Email">
-                                        <i class="material-icons" style="color: #b99093; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">email</i>
+                                <!-- Email Field -->
+                                <div class="input-field col s12" style="margin-bottom: 10px; margin-top: -18px; transform: scale(0.8); transform-origin: left;">
+                                    <div style="border: 2px solid #ccc; border-radius: 6px; padding: 2px 10px; background-color: white; max-width: 400px; margin-left: 515px; position: relative;">
+                                        <input id="Uname" type="text" class="validate" ng-model="Email" required
+                                               style="border: none; box-shadow: none; font-size: 10px; padding: 3px; color: #b99093; background-color: white; width: calc(100% - 40px);"
+                                               placeholder="Email">
+                                        <i class="material-icons" style="color: #b99093; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;">email</i>
                                     </div>
                                 </div>
 
-                                <!-- Password Fiel (id is tentative) -->
-                                <div class="input-field col s12" style="margin-top: 15px;">
-                                    <div style="border: 2px solid #ccc; border-radius: 12px; padding: 10px 100px; background-color: white; max-width: 500px; margin-left: 5px; position: relative;">
-                                        <input id="Upassword2" type="password" class="validate" ng-model="Userpassword2" required style="border: none; box-shadow: none; font-size: 26px; padding: 6px 6px; color: #f6e4e4; background-color: white; width: 100%;" placeholder="Password">
-                                        <i class="material-icons" style="color: #b99093; position: absolute; right: 10px; top: 50%; transform: translateY(-50%);">visibility_off</i>
+                                <!-- Password Field -->
+                                <div class="input-field col s12" style=" margin-bottom: 10px; margin-top: -8px; transform: scale(0.8); transform-origin: left;">
+                                    <div style="border: 2px solid #ccc; border-radius: 6px; padding: 2px 10px; background-color: white; max-width: 400px; margin-left: 515px; position: relative;">
+                                        <input id="Upassword2" type="password" class="validate" ng-model="Userpassword2" required
+                                               style="border: none; box-shadow: none; font-size: 10px; padding: 3px; color: #b99093; background-color: white; width: calc(100% - 40px);"
+                                               placeholder="Password">
+                                        <i class="material-icons" style="color: #b99093; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;">visibility_off</i>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- forgot password? -->
 
-                            <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 20px; margin-top: 10px; margin-left: -800px;">Forgot Password?</h3>
+                            <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 20px; margin-top: -100px; margin-left: -60px; font-size: 14px;">Forgot Password?</h3>
 
                             <style>
                                 input::placeholder {
@@ -54,13 +58,15 @@
 
                                 <!-- Login Button -->
                                 <button class="btn waves-effect waves-light blue-grey darken-4"
-                                        style="height: 70px; font-size: 24px; padding: 10px 100px; border-radius: 12px; font-family: 'Quicksand', sans-serif; color: white; background-color: #263238; max-width: 500px; width: 100%;">
+                                        style="height: 50px; font-size: 15px; padding: 3px; border-radius: 6px; font-family: 'Quicksand', sans-serif; color: white; background-color: #263238; max-width: 400px; margin-left: 620px; width: 325px;">
                                     Log in
                                     <i class="material-icons" style="margin-left: 5px;"></i>
                                 </button>
 
+
+
                                 <!-- don''t have an account -->
-                                <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 20px; margin-top: 15px;">
+                                <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 12px; margin-top: 15px; margin-left: 600px;">
                                     Don’t have an account? Register
                                 </h3>
                             </div>
