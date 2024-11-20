@@ -1,39 +1,81 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <!-- Add Bootstrap 5.3.3 CSS -->
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
 
-    <link type="text/css" rel="stylesheet" href="~/Content/materialize.css" />
-    <script src="~/Scripts/test-bundles/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="row center">
+    <div class="col s2 m2 l2"></div>
 
-    <title>@ViewBag.Title</title>
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-            background-image: url(/Models/pictures/login-image.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-attachment: fixed; 
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
+    <div class="col s8 m8 l8">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <form class="col s12 m12 l12">
+                    <div class="card" style="background: rgba(255, 255, 255, 0.0); margin-top: 300px; width: 1100px; margin-left: auto; margin-right: -350px; min-height: 600px; box-shadow: none;">
+                        <div class="card-content" style="border-radius: 10px; padding: 50px;">
+                            <div class="row">
+                                <div class="card-title center" style="font-family: 'Poppins', sans-serif; color: black; font-size: 45px; font-weight: bold;">
+                                    <h2 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; margin-top: -250px;font-size: 45px; margin-right: -75px;">Log right in.</h2>
+                                    <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 15px; margin-top: -10px; margin-left: 50px;">Pick up right where you left off</h3>
+                                </div>
+                            </div>
 
-        }
-    </style>
-</head>
-<body ng-app="amPAWn" ng-controller="Controller">
-    <div>
-        @RenderBody()
+                            <div class="row" ng-init="Fetchfunc()">
+                                <!-- Email Field -->
+                                <div class="input-field col s12" style="margin-bottom: 10px; margin-top: -18px; transform: scale(0.8); transform-origin: left;">
+                                    <div style="border: 2px solid #ccc; border-radius: 6px; padding: 2px 10px; background-color: white; max-width: 400px; margin-left: 515px; position: relative;">
+                                        <input id="Uname" type="text" class="validate" ng-model="Email" required
+                                               style="border: none; box-shadow: none; font-size: 10px; padding: 3px; color: #b99093; background-color: white; width: calc(100% - 40px);"
+                                               placeholder="Email">
+                                        <i class="material-icons" style="color: #b99093; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;">email</i>
+                                    </div>
+                                </div>
+
+                                <!-- Password Field -->
+                                <div class="input-field col s12" style=" margin-bottom: 10px; margin-top: -8px; transform: scale(0.8); transform-origin: left;">
+                                    <div style="border: 2px solid #ccc; border-radius: 6px; padding: 2px 10px; background-color: white; max-width: 400px; margin-left: 515px; position: relative;">
+                                        <input id="Upassword2" type="password" class="validate" ng-model="Userpassword2" required
+                                               style="border: none; box-shadow: none; font-size: 10px; padding: 3px; color: #b99093; background-color: white; width: calc(100% - 40px);"
+                                               placeholder="Password">
+                                        <i class="material-icons" style="color: #b99093; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 20px;">visibility_off</i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- forgot password? -->
+
+                            <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 20px; margin-top: -100px; margin-left: -60px; font-size: 14px;">Forgot Password?</h3>
+
+                            <style>
+                                input::placeholder {
+                                    font-family: 'Quicksand', sans-serif;
+                                    color: #b99093;
+                                    font-weight: bold;
+                                    font-size: 20px;
+                                }
+                            </style>
+
+                            <!-- for log in -->
+                            <div class="col s12 d-flex flex-column" style="margin-top: 15px; margin-left: -240px;">
+
+                                <!-- Login Button -->
+                                <button class="btn waves-effect waves-light blue-grey darken-4"
+                                        style="height: 50px; font-size: 15px; padding: 3px; border-radius: 6px; font-family: 'Quicksand', sans-serif; color: white; background-color: #263238; max-width: 400px; margin-left: 620px; width: 325px;">
+                                    Log in
+                                    <i class="material-icons" style="margin-left: 5px;"></i>
+                                </button>
+
+
+
+                                <!-- don''t have an account -->
+                                <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 12px; margin-top: 15px; margin-left: 600px;">
+                                    Don’t have an account? Register
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </form> 
+            </div>
+        </div>
     </div>
 
-    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
-    <script src="~/Scripts/angular.js"></script>
-    <script src="~/Scripts/angular/Module.js"></script>
-    <script src="~/Scripts/angular/Service.js"></script>
-    <script src="~/Scripts/angular/Controller.js"></script>
-</body>
-</html>
+    <div class="col s2 m2 l2"></div>
+</div>
