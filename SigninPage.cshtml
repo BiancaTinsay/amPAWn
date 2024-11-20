@@ -1,0 +1,76 @@
+@{
+    Layout = "~/Views/Shared/_SigninLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col s12 m12 l12" style="padding-right: 0;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <form class="col s12 m12 l12">
+                    <div class="card" style="background: rgba(255, 255, 255, 0.0); margin-top: 50px; width: 1100px; margin-left: 0; margin-right: auto; min-height: 600px; box-shadow: none;">
+                        <div class="card-content" style="border-radius: 10px; padding: 50px;">
+                            <div class="row">
+                                <div class="card-title center" style="font-family: 'Poppins', sans-serif; color: black; font-size: 45px; font-weight: bold;">
+                                    <h2 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 48px; margin-left: -780px; margin-top: -80px;">Let's sign you up.</h2>
+                                    <h3 style="font-weight: bold; color: #2f3543; font-family: 'Quicksand', sans-serif; font-size: 18px; margin-left: -915px; margin-top: 30px;">Get started with your account</h3>
+                                </div>
+                            </div>
+
+
+                            <!-- first name, middle name, last name -->
+                            <div class="row" style="margin-bottom: 30px; transform: scale(0.8);">
+                                <div class="input-field col s4">
+                                    <input id="firstName" type="text" class="validate" required style="border: 2px solid #ccc; border-radius: 12px; padding: 12px 25px; font-size: 16px; background-color: white; width: 70%; margin-left: -160px; margin-top: -100px;" placeholder="First Name">
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="middleName" type="text" class="validate" required style="border: 2px solid #ccc; border-radius: 12px; padding: 12px 25px; font-size: 16px; background-color: white; width: 70%; margin-left: -170px; margin-top: -100px;" placeholder="Middle Name">
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="lastName" type="text" class="validate" required style="border: 2px solid #ccc; border-radius: 12px; padding: 12px 25px; font-size: 16px; background-color: white; width: 70%; margin-left: -170px; margin-top: -100px; " placeholder="Last Name">
+                                </div>
+                            </div>
+                            <!-- email, phone number -->
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="email" type="email" class="validate" required style="border: 2px solid #ccc; border-radius: 12px; padding: 7px 1px; font-size: 16px; background-color: white; text-indent: 8px; width: 80%; margin-left: -85px; margin-top: -180px;" placeholder="Email">
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="phoneNumber" type="tel" class="validate" required style="border: 2px solid #ccc; border-radius: 12px 5px; padding: 7px 1px; font-size: 16px; background-color: white; text-indent: 8px; width: 80%; margin-left: -150px; margin-top: -100px;" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <!-- password, confirm password -->
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="password" type="password" class="validate" required style="border: 2px solid #ccc; border-radius: 12px; padding: 7px 1px; font-size: 16px; background-color: white; text-indent: 8px; width: 80%; margin-left: -85px; margin-top: -180px;" placeholder="Password">
+                                    <i class="material-icons" style="position: absolute; right: 220px; top: -50%; transform: translateY(100%); color: #b99093; cursor: pointer;">visibility_off</i>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <input id="confirmPassword" type="password" class="validate" required style="border: 2px solid #ccc; border-radius: 12px 5px; padding: 7px 1px; font-size: 16px; background-color: white; text-indent: 8px; width: 80%; margin-left: -150px; margin-top: -100px;" placeholder="Confirm Password">
+                                    <i class="material-icons" style="position: absolute; right: 275px; top: 20%; transform: translateY(-50%); color: #b99093; cursor: pointer;">visibility_off</i>
+                                </div>
+                            </div>
+
+
+                            <!-- Submit Button -->
+                            <div class="row center">
+                                <button class="btn waves-effect waves-light blue-grey darken-4"
+                                        style="height: 70px; font-size: 24px; padding: 8px 50px; margin-left: -770px; border-radius: 12px; font-family: 'Quicksand', sans-serif; color: white; background-color: #263238; max-width: 500px; width: 100%; transform: scale(0.8);">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    input::placeholder {
+        font-family: 'Quicksand', sans-serif;
+        color: #b99093;
+        font-weight: bold;
+    }
+</style>
